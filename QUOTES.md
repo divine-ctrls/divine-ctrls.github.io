@@ -1,3 +1,29 @@
 layout: page
 title: "QUOTES"
 permalink: /quotes
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Famous Quotes</title>
+        <link rel="stylesheet" href="styles/collect.css" />
+    
+    </head>
+    
+<body>
+    <div id="quoteDisplay">
+        <span id="quoteText">Click any button to be provided a quote</span>
+    </div>
+
+    <div class="button-container">
+        <button class="quote-button" onclick="displayQuote(0)">Shakespeare</button>
+        <button class="quote-button" onclick="displayQuote(1)">Einstein</button>
+        <button class="quote-button" onclick="displayQuote(2)">Dworkin</button>
+        <button class="quote-button" onclick="displayQuote(3)">Twain</button>
+        <button class="quote-button" onclick="displayQuote(4)">Mandela</button>
+    </div>
+
+    <script src="scripts/myScript.js"></script>
+</body>
+</html>
