@@ -1,0 +1,127 @@
+    @import url("https://use.typekit.net/dir3cmu.css");
+@keyframes color {
+  0%   { background: #ca8dad; } /*light*/
+  20%  { background: #b59ec3; } /* grdient 2*/
+  40%  { background: #aabbcc; } /* bluey */
+  60%  { background: #ffbfbf; } /* jenny */
+  80%  { background: #f0e6fa; } /* lavender*/
+  100% { background: #ca8dad; } /* notabyss*/
+}
+
+body {
+  background: #33CCCC; /* Fallback */
+  animation: color 9s infinite linear;
+  text-align: center;
+  padding: 2em;
+}
+
+
+body {
+            font-family: calendula, sans-serif; /*Navbar font*/
+            font-weight: 300;
+            font-style: normal;
+    
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background-color: #ffffff15;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #ca8dad;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background:linear-gradient(to right, #b59ec3, #ca8dad, #ca8dad,  #b59ec3);
+        }
+        button:active {
+            background:linear-gradient(to right, #ca8dad, #b59ec3, #b59ec3, #ca8dad);
+        }
+        .error {
+            color: hsl(0, 69%, 45%);;
+            font-size: 12px;
+            display: none;
+        }
+        .success {
+            color: hsl(144, 66%, 33%);
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+
+.form-container{
+    
+font-family: calendula, sans-serif; /*Navbar font*/
+font-weight: 300;
+font-style: normal;
+}
+
+/* Navbar for other documents in the final */
+.nav-container{
+    position: absolute;
+
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); /* Center upon adjustment */
+    
+    z-index: 2;
+    background: linear-gradient(to bottom,#00000020,transparent);
+    border-radius: 4px;
+    padding:5px;
+}
+.nav-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+    
+font-family: calendula, sans-serif; /*Navbar font*/
+font-weight: 300;
+font-style: normal;
+}
+
+.nav-container ul li{
+    display: inline;
+        text-align: center;
+    text-decoration: none;
+}
+
+.nav-container:hover{
+    position: fixed;
+font-size: 2rem;
+    cursor:default;
+}
+
+.nav-container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    color: hsl(300, 100%, 79%);
+    text-decoration: underline;
+}

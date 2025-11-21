@@ -1,0 +1,197 @@
+/*@property --darkpurple {
+  syntax: '<color>';
+  initial-value: #6c4b69;
+  inherits: false;
+}*/
+@import url("https://use.typekit.net/dir3cmu.css");
+/*@property --lightpurple {
+  syntax: '<color>';
+  initial-value: #a46184;
+}*/
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Backup font*/
+    background: linear-gradient(to bottom, #ca8dad, #b59ec3);
+    min-height: 100vh;
+}
+
+.statesbanner {
+--darkpurple: #6c4b69;
+--lightpurple: #a46184;
+
+    background: var(--darkpurple);
+    text-align: center;
+
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative; /* Contain the ::after pseudo-element */
+    overflow: hidden;
+}
+
+.statesbanner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--darkpurple), var(--lightpurple));
+    opacity: 0; /* Hidden initially */
+    transition: opacity 3s ease;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.statesbanner:hover::after {
+    opacity: 1; /* Fade in gradient */
+}
+
+.statesbanner h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+    font-family: p22-graciosa, "calendula", sans-serif; /* Banner Font*/
+    font-weight: 700;
+    font-style: normal;
+    position: relative;
+    z-index: 2; /* Puts text above ::after pseudo-element */
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+
+    font-family: "novantique-script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #7c5778;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: hsl(329, 27%, 51%);
+    transition: all 3s cubic-bezier();
+}
+
+.panel {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+    font-family: "winsel-variable", sans-serif; /*Default (middle panel rn) font */
+    text-align: center;
+    font-variation-settings:
+        "wdth" 1,
+        "wght" 100;
+    overflow: scroll;
+}
+.stateImages{
+    text-align: center;
+}
+.panel h2 {
+    margin-top: 0;
+    color: #2c3e50;
+ 
+    font-family: "study-variable", sans-serif; /* Select a state to view details/State Name */
+    font-variation-settings: "wght" 700;
+}
+
+.images-panel {
+    display: grid;
+    grid-template-columns: repeat(3, 0.4fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.images-panel img {
+    max-width: 100%;
+    border-radius: 5px;
+ 
+    width: 500px;
+    height: 500px;
+    object-fit: contain; /* Ensures image fits within the box without warping */
+}
+.images-panel img:hover {
+    width: 515px;
+    height: auto;
+}
+
+.images-panel p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #34495e;
+ 
+    text-align: center;
+    
+    font-family: "study-variable", sans-serif; /* Image caption font */
+    font-variation-settings: "wght" 400;
+}
+
+a {
+    color: hsl(300, 35%, 55%);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Nav bar for other documents in the final */
+.nav-container {
+    position: fixed;
+ 
+ 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Adjust for centering */
+
+    z-index: 2;
+    background: linear-gradient(to bottom, #00000020, transparent);
+    border-radius: 4px;
+    padding: 5px;
+}
+.nav-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    font-family: calendula, sans-serif; /*Navbar font*/
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nav-container ul li {
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-container:hover {
+    position: fixed;
+    font-size: 2rem;
+    cursor: default;
+}
+
+.nav-container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    color: hsl(300, 100%, 79%);
+    text-decoration: underline;
+}

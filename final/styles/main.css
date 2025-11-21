@@ -1,0 +1,201 @@
+@import url("https://use.typekit.net/dir3cmu.css");
+
+body {
+    --jenny: #ffbfbf;
+    --bluey: #aabbcc;
+    --lavender: #f0e6fa;
+    --abyss: #6c4b69;
+    margin: 0;
+    padding: 20px;
+        padding-bottom: 30px;
+    font-family: calendula, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(to bottom, var(--jenny), var(--bluey)); /* Initial gradient */
+    min-height: 100vh;
+    transition: background .5s ease; /* Smooth background change */
+    position: relative; /* contains ::before pseudo-element */
+    overflow: auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--jenny), var(--bluey)); /* Start with same as body */
+    opacity: 0; /* Hidden initially */
+    transition: opacity 5.5s ease; /* Smooth opacity transition */
+    z-index: 1; /* Above body background, below content */
+}
+
+body.fade::before {
+    opacity: 1; /* Fade in new gradient */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, transparent, #FFFFFF70, #FFFFFF90, #FFFFFF40,#FFFFFF99,#FFFFFF01);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Puts container above ::before */
+    z-index: 2; /* Above ::before */
+}
+
+h1 {
+    font-family: p22-graciosa, fantasy; /* Banner Font*/
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+}
+
+/* Default, empty rows */
+tr:nth-child(even) {
+    background-color: #f9f9f969;}
+tr:nth-child(odd) {
+    background-color: #f1f1f169; /* Odd rows */
+}
+
+/* Color-coded General Education Courses (rows 1-6) */
+tr:nth-child(-n+6) {
+    background-color: #e0f7fa50;
+    transition: background-color ease-in-out .1s;}tr:nth-child(-n+6):hover {
+    background-color: #e0f7fa;
+    transition: background-color ease-in-out .1s;}
+
+tr:nth-child(-n+6):nth-child(even) {
+    background-color: #b2ebf250;
+        transition: background-color ease-in-out .1s;
+}tr:nth-child(-n+6):nth-child(even):hover {
+    background-color: #b2ebf2;
+        transition: background-color ease-in-out .1s;
+}
+
+/* Color-coded Concentration Courses (rows 7-penultimate) */
+tr:nth-child(n+7):not(:last-child) {
+    background-color: #ffebee50;}tr:nth-child(n+7):not(:last-child):hover {
+    background-color: #ffebee;
+        transition: background-color ease-in-out .1s;}
+tr:nth-child(n+7):not(:last-child):nth-child(even) {
+    background-color: #ffcdd250;
+}tr:nth-child(n+7):not(:last-child):nth-child(even):hover {
+    background-color: #ffcdd2;
+    transition: background-color ease-in-out .1s;
+}
+
+/* Total credits row, last child… */
+tr:last-child {
+    background-color: #aceeaa75;
+    font-weight: bold;
+}
+
+
+/* Control multiple spans (don't disrupt layout) */
+.subject, .number, .course-code {
+    display: inline;
+}
+
+
+/* Change cursor to pointer for course codes */
+.course-code {
+    cursor: pointer;
+}
+
+/* Highlight styles for hover, selected states */
+.hover-highlight, .selected {
+    background-color: #ffb9fd57; /* Bubble */
+    border-radius: 5px;
+    padding: 2.22px;
+}
+.selected {
+    background-color: #aceeaa88; /* Bubble */
+    border-radius: 5px;
+    padding: 2.22px;
+}
+/* Subject highlight */
+.subject-highlight {
+    background-color: #ffff9975;
+    border-radius: 3px;
+    padding: 2.22px;
+    cursor: default;}
+/* Subject highlight on moment of click */
+.subject-highlight:active {
+    background-color: transparent;
+border-radius: 0;
+    padding: 2.22px;
+cursor: pointer;}
+.hover-highlight:active {
+    background-color: #80808080;
+border-radius: 0;
+cursor: default;
+    padding: 2.22px;}
+
+
+/* Nav bar for other documents in the final */
+.nav-container{
+    position: absolute;
+
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); /* Centers despite page adjustments */
+    
+    z-index: 2;
+    background: linear-gradient(to bottom,#00000020,transparent);
+    border-radius: 4px;
+    padding:5px;
+}
+.nav-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+    
+font-family: calendula, sans-serif; /*Navbar font*/
+font-weight: 300;
+font-style: normal;
+}
+
+.nav-container ul li{
+    display: inline;
+        text-align: center;
+    text-decoration: none;
+}
+
+.nav-container:hover{
+    position: fixed;
+font-size: 2rem;
+    cursor:default;
+}
+
+.nav-container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    color: hsl(300, 100%, 79%);
+    text-decoration: underline;
+}
